@@ -13,6 +13,7 @@
     heroic
     olympus
 
+    cachix
     unar
     dust
     undollar
