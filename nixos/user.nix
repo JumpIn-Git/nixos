@@ -13,7 +13,7 @@
     backupFileExtension = "bak";
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.cinnamon = import ./home/home.nix;
+    users.cinnamon = import ../home/home.nix;
   };
 
   users.users = {
