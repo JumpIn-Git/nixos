@@ -1,0 +1,7 @@
+waytrogen
+unar for extraction
+helix with nixd or neovim
+hyprpanel?
+sherlock launcher when in nixpkgs, has hm module in repo
+rio term (--initial-title will set init title, use for clipse etc)
+config.lib.file.mkOutOfStoreSymlink for nvim cfg
