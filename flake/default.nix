@@ -8,7 +8,7 @@
     packages = import ../pkgs pkgs;
     checks = {
       alejandra = pkgs.runCommand "alejandra" {nativeBuildInputs = [pkgs.alejandra];} ''
-        alejandra --check ${inputs.self} < /dev/null | tee $out
+        alejandra --check ${inputs.self} < /dev/null |& tee $out
       '';
     };
   };
