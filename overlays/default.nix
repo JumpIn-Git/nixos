@@ -1,6 +1,6 @@
 {inputs, ...}: {
   flake.overlays = {
-    additions = final: _prev: import ../pkgs final.pkgs;
+    additons = final: _prev: import ../pkgs final.pkgs;
     small = final: _prev: {
       small = import inputs.nixpkgs-small {
         inherit (final) system config;
