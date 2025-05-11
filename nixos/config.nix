@@ -1,6 +1,6 @@
 {
   inputs,
-  outputs,
+  self,
   ...
 }: {
   imports = [
@@ -45,7 +45,7 @@
     };
   };
   nixpkgs = {
-    overlays = builtins.attrValues outputs.overlays;
+    overlays = builtins.attrValues self.overlays;
     config = {
       allowUnfree = true;
     };
