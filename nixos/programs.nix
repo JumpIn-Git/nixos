@@ -33,9 +33,13 @@
     };
     spiceUSBRedirection.enable = true;
   };
-  services.ratbagd.enable = true;
+  services = {
+    ratbagd.enable = true;
+    flatpak.enable = true;
+  };
   environment.systemPackages = with pkgs; [
     piper
+    warehouse
     inputs'.zen-browser.packages.zen-browser
     usbutils
   ];
