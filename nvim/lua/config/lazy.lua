@@ -5,16 +5,17 @@ require("lazy").setup({
     -- import/override with your plugins
     { import = "plugins" },
 
-    -- custom
-    -- disable mason
+    -- (me): disable mason
     { "williamboman/mason-lspconfig.nvim", enabled = false },
     { "williamboman/mason.nvim", enabled = false },
   },
+  -- (me): reuse nix-managed plugins
   dev = {
-    path = vim.fn.stdpath("config") .. "/lazyPath",
+    path = vim.fn.stdpath("data") .. "/nix",
     patterns = { "" },
     fallback = true,
   },
+  -- (me): disable hereocks, use own lua(rocks)
   rocks = {
     hererocks = false,
   },
