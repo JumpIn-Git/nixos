@@ -9,13 +9,6 @@ require("lazy").setup({
     -- disable mason
     { "williamboman/mason-lspconfig.nvim", enabled = false },
     { "williamboman/mason.nvim", enabled = false },
-    -- disable treesitter
-    {
-      "nvim-treesitter/nvim-treesitter",
-      opts = function(_, opts)
-        opts.ensure_installed = {}
-      end,
-    },
   },
   dev = {
     path = vim.fn.stdpath("config") .. "/lazyPath",
