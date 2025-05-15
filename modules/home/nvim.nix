@@ -19,6 +19,7 @@
       ripgrep
       fd
       python3
+      lazygit
 
       nixd
       alejandra
@@ -26,16 +27,15 @@
       lua-language-server
       stylua
     ];
-    plugins = with pkgs.vimPlugins; [lazy-nvim];
   };
 
   xdg.dataFile."nvim/nix" = {
-    source = pkgs.linkFarm "lazyPath" (builtins.map (drv: {
-        name = lib.getName drv;
-        path = drv;
+    source = pkgs.linkFarm "lazyPath" (builtins.map (p: {
+        name = lib.getName p;
+        path = p;
       }) (with pkgs.vimPlugins; [
-        LazyVim
         blink-cmp
+        # For now, only blink is needed (prebuilt binaries)
       ]));
     recursive = true;
   };
