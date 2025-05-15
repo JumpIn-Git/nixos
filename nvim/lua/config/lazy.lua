@@ -4,10 +4,6 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins" },
     -- import/override with your plugins
     { import = "plugins" },
-
-    -- (me): disable mason
-    { "williamboman/mason-lspconfig.nvim", enabled = false },
-    { "williamboman/mason.nvim", enabled = false },
   },
   -- (me): reuse nix-managed plugins
   dev = {
