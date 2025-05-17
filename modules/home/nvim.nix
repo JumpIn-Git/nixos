@@ -13,8 +13,6 @@
     extraPackages = with pkgs; [
       gcc
       git
-      lua
-      luarocks
 
       ripgrep
       fd
