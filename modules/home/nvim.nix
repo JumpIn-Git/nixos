@@ -40,7 +40,7 @@
   home.activation.nvim = lib.mkAfter ''
     run rm -rf ${config.xdg.configHome}/nvim
     run ln -sf \
-      /etc/nixos/nvim \
+      /etc/nixos/home/nvim \
       ${config.xdg.configHome}/nvim
   '';
 }
