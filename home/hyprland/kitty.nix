@@ -13,4 +13,5 @@
     "$terminal" = "kitty";
     bind = ["$mod, Q, exec, $terminal"];
   };
+  catppuccin.kitty.enable = true;
 }
