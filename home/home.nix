@@ -1,10 +1,16 @@
-{inputs, ...}: {
-  imports = [
-    ./fish.nix
-    ./packages.nix
-    ./zed.nix
-    inputs.catppuccin.homeModules.default
-  ];
+{
+  inputs,
+  outputs,
+  ...
+}: {
+  imports =
+    builtins.attrValues outputs.homeModules
+    ++ [
+      ./fish.nix
+      ./packages.nix
+      ./zed.nix
+      inputs.catppuccin.homeModules.default
+    ];
   catppuccin = {
     flavor = "macchiato";
     accent = "lavender";
