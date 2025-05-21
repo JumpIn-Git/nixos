@@ -1,3 +1,5 @@
 {
-  flake.homeModules = {};
+  flake.homeModules = {
+    nvim = ./nvim.nix;
+  };
 }

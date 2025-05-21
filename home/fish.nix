@@ -24,6 +24,11 @@
         microfetch
       '';
     };
+    bat.enable = true;
+    fzf = {
+      enable = true;
+      enableFishIntegration = false;
+    };
     eza = {
       enable = true;
       icons = "auto";
@@ -35,12 +40,7 @@
       enable = true;
       options = ["--cmd cd"];
     };
-    bat.enable = true;
     carapace.enable = true;
-    fzf = {
-      enable = true;
-      enableFishIntegration = false;
-    };
   };
 
   home = {

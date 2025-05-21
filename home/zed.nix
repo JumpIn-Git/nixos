@@ -1,8 +1,4 @@
-{
-  pkgs,
-  config,
-  ...
-}: {
+{pkgs, ...}: {
   programs.zed-editor = {
     enable = true;
     extensions = ["nix" "nu" "fish"];
@@ -21,7 +17,6 @@
       in {
         options = {
           nixos.expr = "${f}.nixosConfigurations.jump1n.options";
-          home-manager.expr = "${f}.homeConfigurations.\"cinnamon@jump1n\".options";
         };
       };
     };

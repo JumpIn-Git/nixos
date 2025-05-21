@@ -1,6 +1,6 @@
 {inputs, ...}: {
-  imports = with inputs; [
-    sherlock.homeModules.default
+  imports = [
+    inputs.sherlock.homeModules.default
   ];
 
   programs.sherlock = {
