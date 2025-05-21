@@ -1,7 +1,7 @@
 {
   services.clipse = {
     enable = true;
-    historySize = 1000;
+    historySize = 200;
   };
   wayland.windowManager.hyprland.settings = {
     windowrulev2 = [
@@ -9,7 +9,7 @@
       "size 622 652,class:(clipse)"
     ];
     bind = [
-      "$mod, V, exec, kitty --class --clipse -e 'clipse'"
+      "$mod, V, exec, kitty --class --clipse -e clipse"
     ];
   };
 }
