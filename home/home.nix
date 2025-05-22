@@ -1,10 +1,10 @@
 {
   inputs,
-  outputs,
+  self,
   ...
 }: {
   imports =
-    builtins.attrValues outputs.homeModules
+    builtins.attrValues self.homeModules
     ++ [
       ./fish.nix
       ./packages.nix
