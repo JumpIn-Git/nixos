@@ -16,7 +16,6 @@
 
       ripgrep
       fd
-      python3
       lazygit
 
       nixd
@@ -37,10 +36,11 @@
       ]));
     recursive = true;
   };
-  home.activation.nvim = lib.mkAfter ''
-    run rm -rf ${config.xdg.configHome}/nvim
-    run ln -sf \
-      /etc/nixos/home/nvim \
-      ${config.xdg.configHome}/nvim
-  '';
+  xdg.configFile."nvim".source = config.lib.file.mkOutOfStoreSymlink "/etc/nixos/home/nvim";
+  # home.activation.nvim = lib.mkAfter ''
+  #   run rm -rf ${config.xdg.configHome}/nvim
+  #   run ln -sf \
+  #     /etc/nixos/home/nvim \
+  #     ${config.xdg.configHome}/nvim
+  # '';
 }
