@@ -14,7 +14,7 @@
               | where workspace.id == $workspace;
 
               for window in $windows {
-                hyprctl dispatch movetoworkspacesilent $"${ws}, address:($window.address)"
+                hyprctl dispatch movetoworkspacesilent $"${ws}, address:($window.address)";
               }
             ''
           }"
