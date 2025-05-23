@@ -44,10 +44,9 @@
   } @ inputs:
     parts.lib.mkFlake {inherit inputs;} ({withSystem, ...}: {
       systems = import systems;
-      imports = [./modules ./overlays];
+      imports = [./modules ./overlays ./pkgs];
       perSystem = {pkgs, ...}: {
         formatter = pkgs.alejandra;
-        packages = import ./pkgs pkgs;
       };
       flake = {
         nixosConfigurations.jump1n = withSystem "x86_64-linux" ({

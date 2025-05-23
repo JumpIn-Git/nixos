@@ -1,3 +1,7 @@
-pkgs: {
-  diskonaut = pkgs.callPackage ./diskonaut.nix {};
+{
+  perSystem = {pkgs, ...}: {
+    packages = {
+      diskonaut = pkgs.callPackage ./diskonaut.nix {};
+    };
+  };
 }
