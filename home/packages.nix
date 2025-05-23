@@ -1,5 +1,6 @@
 {
   pkgs,
+  inputs',
   self',
   ...
 }: {
@@ -11,7 +12,7 @@
 
     hydralauncher
     heroic
-    olympus
+    inputs'.olympus.legacyPackages.olympus
 
     cachix
     unar
