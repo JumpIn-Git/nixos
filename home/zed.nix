@@ -13,10 +13,11 @@
         };
       };
       lsp.nixd.settings = let
-        f = "(builtins.getFlake \"/etc/nixos\")";
+        options = "(builtins.getFlake \"/etc/nixos\").nixosConfigurations.jump1n.options";
       in {
         options = {
-          nixos.expr = "${f}.nixosConfigurations.jump1n.options";
+          nixos.expr = options;
+          home-manager = "${options}.home-manager.users.type.getSubOptions []";
         };
       };
     };

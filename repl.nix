@@ -9,9 +9,9 @@ in
   // {inherit getFlake;}
   // nixpkgs
   // nixpkgs.lib
-  // {
+  // rec {
     nixos = flake.nixosConfigurations.jump1n;
-    home = flake.homeConfigurations."cinnamon@jump1n";
+    home = nixos.config.home-manager.users.cinnamon;
   }
   // {
     inputTree = inputs:
