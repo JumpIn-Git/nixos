@@ -37,10 +37,7 @@
     ratbagd.enable = true;
     flatpak.enable = true;
   };
-  xdg.portal = {
-    enable = true;
-    extraPortals = with pkgs; [xdg-desktop-portal-hyprland];
-  };
+  programs.hyprland.enable = true; # This manages xdg-portal's
   environment.systemPackages = with pkgs; [
     piper
     warehouse
