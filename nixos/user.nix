@@ -1,4 +1,8 @@
-{inputs, ...} @ args: {
+{
+  inputs,
+  pkgs,
+  ...
+} @ args: {
   imports = with inputs; [
     nixos-hardware.nixosModules.lenovo-thinkpad-l14-amd
     home-manager.nixosModules.default
@@ -21,6 +25,7 @@
       isNormalUser = true;
       initialPassword = "horsey";
       extraGroups = ["wheel" "networkmanager"];
+      shell = pkgs.fish;
     };
   };
   security.sudo.wheelNeedsPassword = false;
