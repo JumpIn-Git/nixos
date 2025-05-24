@@ -20,6 +20,10 @@
     users.cinnamon = import ../home/home.nix;
   };
 
+  programs.fish = {
+    enable = true;
+    useBabelfish = true;
+  };
   users.users = {
     cinnamon = {
       isNormalUser = true;
