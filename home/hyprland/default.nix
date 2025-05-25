@@ -1,6 +1,6 @@
 {
   imports = [
-    ./workspaces.nix
+    ./binds
 
     ./ashell.nix
     ./clipse.nix
