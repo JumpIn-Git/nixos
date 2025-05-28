@@ -47,8 +47,9 @@
     shell.enableFishIntegration = true;
     shellAliases = {
       cat = "bat";
+      df = "duf";
     };
-    packages = with pkgs; [microfetch];
+    packages = with pkgs; [microfetch duf];
   };
   catppuccin = {
     fish.enable = true;
