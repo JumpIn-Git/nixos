@@ -6,7 +6,7 @@
   imports =
     builtins.attrValues self.homeModules
     ++ [
-      ./fish.nix
+      ./shells
       ./packages.nix
       ./zed.nix
       inputs.catppuccin.homeModules.default
